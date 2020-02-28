@@ -1,0 +1,92 @@
+#include <iostream>
+#include <cstdlib>
+#include <time.h>
+
+/*You can use enum, but don't do it like I'm, it's awuful.
+Use class instead of this or try another solution.
+And don't use namespace in your project!*/
+
+using namespace std;
+
+void magic_Ball(int number) {
+    enum ball_Statement {
+        CERTAIN,
+        DECIDEDLY,
+        WITHOUT,
+        YES,
+        RELY,
+        SEE,
+        MOST,
+        OUTLOOK,
+        YESY,
+        SINGS,
+        AGAIN,
+        DONT,
+        NO,
+        NOT,
+        VERY
+    };
+    switch (number) {
+    case ball_Statement::CERTAIN:
+        cout << "It is certain.\n";
+        break;
+    case ball_Statement::DECIDEDLY:
+        cout << "It is decidedly so.\n";
+        break;
+    case ball_Statement::WITHOUT:
+        cout << "Without a doubt.\n";
+        break;
+    case ball_Statement::YES:
+        cout << "Yes - definitely.\n";
+        break;
+    case ball_Statement::RELY:
+        cout << "You may rely on it.\n";
+        break;
+    case ball_Statement::SEE:
+        cout << "As I see it, yes.\n";
+        break;
+    case ball_Statement::MOST:
+        cout << "Most likely.\n";
+        break;
+    case ball_Statement::OUTLOOK:
+        cout << "Outlook good.\n";
+        break;
+    case ball_Statement::YESY:
+        cout << "Yes.\n";
+        break;
+    case ball_Statement::SINGS:
+        cout << "Signs point to yes.\n";
+        break;
+    case ball_Statement::AGAIN:
+        cout << "Reply hazy, try again.\n";
+        break;
+    case ball_Statement::DONT:
+        cout << "Don't count on it.\n";
+        break;
+    case ball_Statement::NO:
+        cout << "My reply is no.\n";
+        break;
+    case ball_Statement::NOT:
+        cout << "Outlook not so good.\n";
+        break;
+    case ball_Statement::VERY:
+        cout << "Very doubtful.\n";
+        break;
+    default:
+        cout << "I don't see clear now, try again later, maggot!\n";
+        break;
+    }
+
+
+}
+
+
+int main() {
+    
+    
+    srand(time(NULL));
+    
+    int answer = rand()%20;
+    cout << "Magic ball says: ";
+    magic_Ball(answer);
+}
